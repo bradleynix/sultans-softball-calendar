@@ -14,6 +14,7 @@ import json
 import os
 import re
 import traceback
+import time
 from collections import defaultdict
 from dataclasses import asdict, dataclass
 from datetime import datetime, timedelta, timezone
@@ -26,7 +27,7 @@ from bs4 import BeautifulSoup
 
 SOURCE_URL = os.getenv(
     "SOURCE_URL",
-    "https://vaarlingtonweb.myvscloud.com/webtrac/web/schedule.html?action=leaguedetails&fmid=345063462&homeid=304539538",
+    "https://vaarlingtonweb.myvscloud.com/webtrac/web/schedule.html?action=leaguedetails&awayid=304539538&fmid=345063462",
 )
 TEAM_NAME = os.getenv("TEAM_NAME", "Sultans")
 LEAGUE_ID = os.getenv("LEAGUE_ID", "345063462")
@@ -97,32 +98,67 @@ def pretty_location(label: str) -> str:
     return f"{park} — Adult Diamond #{num}"
 
 
+def cell_value(cell, label: str = "") -> str:
+    """Return visible cell text with WebTrac's responsive column label removed.
+
+    WebTrac repeats labels such as "Date", "Time", and "Away Team" inside each
+    table cell for its mobile layout. BeautifulSoup includes those labels in
+    get_text(), so a date cell can appear as "Date 08/17/2026" rather than just
+    "08/17/2026". The original parser expected the latter and therefore found
+    zero games on GitHub Actions.
+    """
+    value = clean(cell.get_text(" ", strip=True))
+    if label:
+        value = re.sub(rf"^{re.escape(label)}\s*:?\s*", "", value, flags=re.I)
+    return clean(value)
+
+
+def find_date(value: str) -> str:
+    m = re.search(r"\b(\d{1,2}/\d{1,2}/\d{4})\b", value)
+    return m.group(1) if m else ""
+
+
+def find_time(value: str) -> str:
+    m = re.search(r"\b(\d{1,2}:\d{2}\s*(?:am|pm))\b", value, re.I)
+    return clean(m.group(1)) if m else ""
+
+
 def parse_nights(page_html: str) -> list[Night]:
     soup = BeautifulSoup(page_html, "html.parser")
     nights: list[Night] = []
 
     # WebTrac's schedule rows currently have seven columns:
     # Date | Time | Location | Away Team | Away Score | Home Team | Home Score.
-    # Instead of depending on CSS classes, find any table row whose first two cells
-    # look like a date and time and whose away/home columns include our team.
+    # The site also inserts the column heading inside each data cell for its
+    # responsive/mobile presentation, so parse the date/time by pattern and strip
+    # known labels from the remaining cells instead of requiring exact raw text.
     for tr in soup.find_all("tr"):
         cells = tr.find_all(["td", "th"], recursive=False)
         if len(cells) < 6:
             continue
-        values = [clean(c.get_text(" ", strip=True)) for c in cells]
-        if not DATE_RE.match(values[0]) or not TIME_RE.match(values[1]):
+
+        raw_values = [clean(c.get_text(" ", strip=True)) for c in cells]
+        date = find_date(raw_values[0])
+        time = find_time(raw_values[1])
+        if not date or not time:
             continue
 
-        location_label = values[2]
-        away = values[3]
-        home = values[5]
+        location_label = cell_value(cells[2], "Location")
+        away = cell_value(cells[3], "Away Team")
+        home = cell_value(cells[5], "Home Team")
+
+        # Defensive fallbacks if WebTrac changes punctuation around its labels.
+        location_label = re.sub(r"^Location\s*", "", location_label, flags=re.I).strip()
+        away = re.sub(r"^Away\s*Team\s*", "", away, flags=re.I).strip()
+        home = re.sub(r"^Home\s*Team\s*", "", home, flags=re.I).strip()
+
         if TEAM_NAME.casefold() not in {away.casefold(), home.casefold()}:
             continue
 
         nights.append(
             Night(
-                date=values[0],
-                time=values[1],
+                date=date,
+                time=time,
                 location_label=pretty_location(location_label),
                 location_address=extract_address(cells[2]),
                 away_team=away,
@@ -130,7 +166,7 @@ def parse_nights(page_html: str) -> list[Night]:
             )
         )
 
-    # De-duplicate in case WebTrac renders a desktop and mobile copy of the same table.
+    # De-duplicate in case WebTrac renders desktop and mobile copies of the table.
     unique: list[Night] = []
     seen: set[tuple[str, str, str, str, str]] = set()
     for n in nights:
@@ -141,7 +177,6 @@ def parse_nights(page_html: str) -> list[Night]:
 
     unique.sort(key=lambda n: datetime.strptime(f"{n.date} {n.time.upper()}", "%m/%d/%Y %I:%M %p"))
     return unique
-
 
 def parse_start(night: Night) -> datetime:
     dt = datetime.strptime(f"{night.date} {night.time.upper()}", "%m/%d/%Y %I:%M %p")
@@ -309,20 +344,58 @@ def save_debug(name: str, content: str) -> None:
     (DEBUG_DIR / name).write_text(content, encoding="utf-8")
 
 
+def fetch_schedule() -> requests.Response:
+    """Fetch WebTrac with browser-like headers and useful failure diagnostics."""
+    session = requests.Session()
+    session.headers.update(
+        {
+            "User-Agent": (
+                "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
+                "(KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+            ),
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+            "Accept-Language": "en-US,en;q=0.9",
+            "Cache-Control": "no-cache",
+            "Pragma": "no-cache",
+            "Upgrade-Insecure-Requests": "1",
+        }
+    )
+
+    last_response = None
+    last_exc = None
+    for attempt in range(1, 4):
+        try:
+            response = session.get(SOURCE_URL, timeout=30, allow_redirects=True)
+            last_response = response
+            # Always save the response BEFORE raise_for_status so a 403/500 still
+            # leaves us something useful in the GitHub Actions diagnostic artifact.
+            save_debug(
+                f"http-attempt-{attempt}.txt",
+                f"status={response.status_code}\nurl={response.url}\nheaders={dict(response.headers)}\n",
+            )
+            save_debug(f"source-attempt-{attempt}.html", response.text)
+            if response.ok:
+                return response
+        except requests.RequestException as exc:
+            last_exc = exc
+            save_debug(f"request-error-attempt-{attempt}.txt", traceback.format_exc())
+
+        if attempt < 3:
+            time.sleep(attempt * 2)
+
+    if last_response is not None:
+        last_response.raise_for_status()
+    if last_exc is not None:
+        raise last_exc
+    raise RuntimeError("WebTrac request failed without returning a response.")
+
+
 def main() -> None:
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     DEBUG_DIR.mkdir(parents=True, exist_ok=True)
 
     try:
-        response = requests.get(
-            SOURCE_URL,
-            timeout=30,
-            headers={
-                "User-Agent": "Mozilla/5.0 (compatible; SultansCalendarBot/1.0; +https://github.com/)",
-                "Accept": "text/html,application/xhtml+xml",
-            },
-        )
-        response.raise_for_status()
+        response = fetch_schedule()
         save_debug("source.html", response.text)
         save_debug("http.txt", f"status={response.status_code}\nurl={response.url}\n")
 
@@ -330,9 +403,18 @@ def main() -> None:
         save_debug("parsed-nights.json", json.dumps([asdict(n) for n in nights], indent=2))
 
         if len(nights) < MIN_NIGHTS:
+            # Save a compact dump of every row to make future DOM changes obvious.
+            soup = BeautifulSoup(response.text, "html.parser")
+            row_dump = []
+            for tr in soup.find_all("tr"):
+                cells = tr.find_all(["td", "th"], recursive=False)
+                if cells:
+                    row_dump.append([clean(c.get_text(" ", strip=True)) for c in cells])
+            save_debug("table-rows.json", json.dumps(row_dump, indent=2))
             raise RuntimeError(
-                f"Safety check failed: found only {len(nights)} Sultans schedule nights; expected at least {MIN_NIGHTS}. "
-                "The source page may have changed, so the existing published calendar was not overwritten."
+                f"Safety check failed: found only {len(nights)} Sultans schedule nights; "
+                f"expected at least {MIN_NIGHTS}. The source page may have changed, so "
+                "the existing published calendar was not overwritten."
             )
 
         games = build_games(nights)
