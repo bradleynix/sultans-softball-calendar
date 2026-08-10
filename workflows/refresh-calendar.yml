@@ -35,7 +35,7 @@ jobs:
 
       - name: Scrape schedule and build calendar
         env:
-          SOURCE_URL: "https://vaarlingtonweb.myvscloud.com/webtrac/web/schedule.html?action=leaguedetails&fmid=345063462&homeid=304539538"
+          SOURCE_URL: "https://vaarlingtonweb.myvscloud.com/webtrac/web/schedule.html?action=leaguedetails&awayid=304539538&fmid=345063462"
           TEAM_NAME: "Sultans"
           LEAGUE_ID: "345063462"
           TIMEZONE: "America/New_York"
