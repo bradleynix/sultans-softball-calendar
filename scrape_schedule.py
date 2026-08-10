@@ -39,6 +39,7 @@ DOUBLEHEADER_GAP_MINUTES = int(os.getenv("DOUBLEHEADER_GAP_MINUTES", "60"))
 OUTPUT_DIR = Path(os.getenv("OUTPUT_DIR", "site"))
 DEBUG_DIR = Path(os.getenv("DEBUG_DIR", "debug"))
 CALENDAR_FILENAME = os.getenv("CALENDAR_FILENAME", "sultans-softball.ics")
+SOURCE_HTML_FILE = os.getenv("SOURCE_HTML_FILE", "").strip()
 
 DATE_RE = re.compile(r"^\d{1,2}/\d{1,2}/\d{4}$")
 TIME_RE = re.compile(r"^\d{1,2}:\d{2}\s*(?:am|pm)$", re.I)
@@ -395,16 +396,23 @@ def main() -> None:
     DEBUG_DIR.mkdir(parents=True, exist_ok=True)
 
     try:
-        response = fetch_schedule()
-        save_debug("source.html", response.text)
-        save_debug("http.txt", f"status={response.status_code}\nurl={response.url}\n")
+        if SOURCE_HTML_FILE:
+            source_path = Path(SOURCE_HTML_FILE)
+            page_html = source_path.read_text(encoding="utf-8")
+            save_debug("source.html", page_html)
+            save_debug("http.txt", f"source=local-browser\nfile={source_path}\n")
+        else:
+            response = fetch_schedule()
+            page_html = response.text
+            save_debug("source.html", page_html)
+            save_debug("http.txt", f"status={response.status_code}\nurl={response.url}\n")
 
-        nights = parse_nights(response.text)
+        nights = parse_nights(page_html)
         save_debug("parsed-nights.json", json.dumps([asdict(n) for n in nights], indent=2))
 
         if len(nights) < MIN_NIGHTS:
             # Save a compact dump of every row to make future DOM changes obvious.
-            soup = BeautifulSoup(response.text, "html.parser")
+            soup = BeautifulSoup(page_html, "html.parser")
             row_dump = []
             for tr in soup.find_all("tr"):
                 cells = tr.find_all(["td", "th"], recursive=False)
