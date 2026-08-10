@@ -2,6 +2,13 @@ name: Refresh and publish Sultans softball calendar
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "scrape_schedule.py"
+      - "requirements.txt"
+      - ".github/workflows/refresh-calendar.yml"
   schedule:
     # Daily at 6:23 AM Eastern. A non-zero minute avoids the busiest top-of-hour window.
     - cron: '23 6 * * *'
