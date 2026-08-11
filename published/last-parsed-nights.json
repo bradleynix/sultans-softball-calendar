@@ -1,0 +1,74 @@
+[
+  {
+    "date": "08/17/2026",
+    "time": "6:30 pm",
+    "location_label": "Barcroft Park \u2014 Adult Diamond #4",
+    "location_address": "4200 S Four Mile Run Dr Arlington VA 22206",
+    "away_team": "The Locals",
+    "home_team": "Sultans"
+  },
+  {
+    "date": "08/24/2026",
+    "time": "8:30 pm",
+    "location_label": "Quincy Park \u2014 Adult Diamond #3",
+    "location_address": "1021 N Quincy St Arlington VA 22203",
+    "away_team": "Ninos",
+    "home_team": "Sultans"
+  },
+  {
+    "date": "08/31/2026",
+    "time": "6:30 pm",
+    "location_label": "Gunston Park \u2014 Adult Diamond #1",
+    "location_address": "2700 S Lang St Arlington VA 22206",
+    "away_team": "Sultans",
+    "home_team": "#SlingshotDC"
+  },
+  {
+    "date": "09/14/2026",
+    "time": "6:30 pm",
+    "location_label": "Barcroft Park \u2014 Adult Diamond #4",
+    "location_address": "4200 S Four Mile Run Dr Arlington VA 22206",
+    "away_team": "Sultans",
+    "home_team": "Narwhals"
+  },
+  {
+    "date": "09/21/2026",
+    "time": "6:30 pm",
+    "location_label": "Gunston Park \u2014 Adult Diamond #1",
+    "location_address": "2700 S Lang St Arlington VA 22206",
+    "away_team": "Sultans",
+    "home_team": "Rocklands"
+  },
+  {
+    "date": "09/28/2026",
+    "time": "6:30 pm",
+    "location_label": "Jennie Dean Park \u2014 Adult Diamond #1 (Ernest E. Johnson Field)",
+    "location_address": "3630 27th St S Arlington VA 22206",
+    "away_team": "Brawl Stars",
+    "home_team": "Sultans"
+  },
+  {
+    "date": "10/05/2026",
+    "time": "6:30 pm",
+    "location_label": "Barcroft Park \u2014 Adult Diamond #4",
+    "location_address": "4200 S Four Mile Run Dr Arlington VA 22206",
+    "away_team": "Brew Crew",
+    "home_team": "Sultans"
+  },
+  {
+    "date": "10/19/2026",
+    "time": "8:30 pm",
+    "location_label": "Quincy Park \u2014 Adult Diamond #3",
+    "location_address": "1021 N Quincy St Arlington VA 22203",
+    "away_team": "Sultans",
+    "home_team": "The Locals"
+  },
+  {
+    "date": "10/26/2026",
+    "time": "6:30 pm",
+    "location_label": "Barcroft Park \u2014 Adult Diamond #4",
+    "location_address": "4200 S Four Mile Run Dr Arlington VA 22206",
+    "away_team": "Sultans",
+    "home_team": "Ninos"
+  }
+]

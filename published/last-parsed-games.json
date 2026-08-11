@@ -1,0 +1,200 @@
+[
+  {
+    "start_local": "2026-08-17T18:30:00-04:00",
+    "end_local": "2026-08-17T19:25:00-04:00",
+    "opponent": "The Locals",
+    "location": "Barcroft Park \u2014 Adult Diamond #4, 4200 S Four Mile Run Dr Arlington VA 22206",
+    "home_away": "Home",
+    "game_number": 1,
+    "meeting_number": 1,
+    "uid": "b2dd201605963b0150bf44ee@sultans-softball-calendar",
+    "summary": "Sultans vs The Locals \u2014 Game 1"
+  },
+  {
+    "start_local": "2026-08-17T19:30:00-04:00",
+    "end_local": "2026-08-17T20:25:00-04:00",
+    "opponent": "The Locals",
+    "location": "Barcroft Park \u2014 Adult Diamond #4, 4200 S Four Mile Run Dr Arlington VA 22206",
+    "home_away": "Away",
+    "game_number": 2,
+    "meeting_number": 1,
+    "uid": "37d0a20593858e127615cff1@sultans-softball-calendar",
+    "summary": "Sultans @ The Locals \u2014 Game 2"
+  },
+  {
+    "start_local": "2026-08-24T20:30:00-04:00",
+    "end_local": "2026-08-24T21:25:00-04:00",
+    "opponent": "Ninos",
+    "location": "Quincy Park \u2014 Adult Diamond #3, 1021 N Quincy St Arlington VA 22203",
+    "home_away": "Home",
+    "game_number": 1,
+    "meeting_number": 1,
+    "uid": "b27cbbcbb43de567c1f01e9c@sultans-softball-calendar",
+    "summary": "Sultans vs Ninos \u2014 Game 1"
+  },
+  {
+    "start_local": "2026-08-24T21:30:00-04:00",
+    "end_local": "2026-08-24T22:25:00-04:00",
+    "opponent": "Ninos",
+    "location": "Quincy Park \u2014 Adult Diamond #3, 1021 N Quincy St Arlington VA 22203",
+    "home_away": "Away",
+    "game_number": 2,
+    "meeting_number": 1,
+    "uid": "775149d92760e1763cff1745@sultans-softball-calendar",
+    "summary": "Sultans @ Ninos \u2014 Game 2"
+  },
+  {
+    "start_local": "2026-08-31T18:30:00-04:00",
+    "end_local": "2026-08-31T19:25:00-04:00",
+    "opponent": "#SlingshotDC",
+    "location": "Gunston Park \u2014 Adult Diamond #1, 2700 S Lang St Arlington VA 22206",
+    "home_away": "Away",
+    "game_number": 1,
+    "meeting_number": 1,
+    "uid": "da1ae7f815e1e5a684359110@sultans-softball-calendar",
+    "summary": "Sultans @ #SlingshotDC \u2014 Game 1"
+  },
+  {
+    "start_local": "2026-08-31T19:30:00-04:00",
+    "end_local": "2026-08-31T20:25:00-04:00",
+    "opponent": "#SlingshotDC",
+    "location": "Gunston Park \u2014 Adult Diamond #1, 2700 S Lang St Arlington VA 22206",
+    "home_away": "Home",
+    "game_number": 2,
+    "meeting_number": 1,
+    "uid": "19c2644e800e2054cb42886e@sultans-softball-calendar",
+    "summary": "Sultans vs #SlingshotDC \u2014 Game 2"
+  },
+  {
+    "start_local": "2026-09-14T18:30:00-04:00",
+    "end_local": "2026-09-14T19:25:00-04:00",
+    "opponent": "Narwhals",
+    "location": "Barcroft Park \u2014 Adult Diamond #4, 4200 S Four Mile Run Dr Arlington VA 22206",
+    "home_away": "Away",
+    "game_number": 1,
+    "meeting_number": 1,
+    "uid": "8105cfb15b01b0747fdd812d@sultans-softball-calendar",
+    "summary": "Sultans @ Narwhals \u2014 Game 1"
+  },
+  {
+    "start_local": "2026-09-14T19:30:00-04:00",
+    "end_local": "2026-09-14T20:25:00-04:00",
+    "opponent": "Narwhals",
+    "location": "Barcroft Park \u2014 Adult Diamond #4, 4200 S Four Mile Run Dr Arlington VA 22206",
+    "home_away": "Home",
+    "game_number": 2,
+    "meeting_number": 1,
+    "uid": "b2e2e8799b93225efc628a84@sultans-softball-calendar",
+    "summary": "Sultans vs Narwhals \u2014 Game 2"
+  },
+  {
+    "start_local": "2026-09-21T18:30:00-04:00",
+    "end_local": "2026-09-21T19:25:00-04:00",
+    "opponent": "Rocklands",
+    "location": "Gunston Park \u2014 Adult Diamond #1, 2700 S Lang St Arlington VA 22206",
+    "home_away": "Away",
+    "game_number": 1,
+    "meeting_number": 1,
+    "uid": "125f3c735bf7e989334c512a@sultans-softball-calendar",
+    "summary": "Sultans @ Rocklands \u2014 Game 1"
+  },
+  {
+    "start_local": "2026-09-21T19:30:00-04:00",
+    "end_local": "2026-09-21T20:25:00-04:00",
+    "opponent": "Rocklands",
+    "location": "Gunston Park \u2014 Adult Diamond #1, 2700 S Lang St Arlington VA 22206",
+    "home_away": "Home",
+    "game_number": 2,
+    "meeting_number": 1,
+    "uid": "247d086c9b49eca5d7512a8a@sultans-softball-calendar",
+    "summary": "Sultans vs Rocklands \u2014 Game 2"
+  },
+  {
+    "start_local": "2026-09-28T18:30:00-04:00",
+    "end_local": "2026-09-28T19:25:00-04:00",
+    "opponent": "Brawl Stars",
+    "location": "Jennie Dean Park \u2014 Adult Diamond #1 (Ernest E. Johnson Field), 3630 27th St S Arlington VA 22206",
+    "home_away": "Home",
+    "game_number": 1,
+    "meeting_number": 1,
+    "uid": "5334d2b19918cd4ba6f7b4a3@sultans-softball-calendar",
+    "summary": "Sultans vs Brawl Stars \u2014 Game 1"
+  },
+  {
+    "start_local": "2026-09-28T19:30:00-04:00",
+    "end_local": "2026-09-28T20:25:00-04:00",
+    "opponent": "Brawl Stars",
+    "location": "Jennie Dean Park \u2014 Adult Diamond #1 (Ernest E. Johnson Field), 3630 27th St S Arlington VA 22206",
+    "home_away": "Away",
+    "game_number": 2,
+    "meeting_number": 1,
+    "uid": "86d181710e1cd27096546ee4@sultans-softball-calendar",
+    "summary": "Sultans @ Brawl Stars \u2014 Game 2"
+  },
+  {
+    "start_local": "2026-10-05T18:30:00-04:00",
+    "end_local": "2026-10-05T19:25:00-04:00",
+    "opponent": "Brew Crew",
+    "location": "Barcroft Park \u2014 Adult Diamond #4, 4200 S Four Mile Run Dr Arlington VA 22206",
+    "home_away": "Home",
+    "game_number": 1,
+    "meeting_number": 1,
+    "uid": "7255aebbe0cabac931a1d72a@sultans-softball-calendar",
+    "summary": "Sultans vs Brew Crew \u2014 Game 1"
+  },
+  {
+    "start_local": "2026-10-05T19:30:00-04:00",
+    "end_local": "2026-10-05T20:25:00-04:00",
+    "opponent": "Brew Crew",
+    "location": "Barcroft Park \u2014 Adult Diamond #4, 4200 S Four Mile Run Dr Arlington VA 22206",
+    "home_away": "Away",
+    "game_number": 2,
+    "meeting_number": 1,
+    "uid": "a2abef5c63c15fb798e0c228@sultans-softball-calendar",
+    "summary": "Sultans @ Brew Crew \u2014 Game 2"
+  },
+  {
+    "start_local": "2026-10-19T20:30:00-04:00",
+    "end_local": "2026-10-19T21:25:00-04:00",
+    "opponent": "The Locals",
+    "location": "Quincy Park \u2014 Adult Diamond #3, 1021 N Quincy St Arlington VA 22203",
+    "home_away": "Away",
+    "game_number": 1,
+    "meeting_number": 2,
+    "uid": "f735e3ed42630886cacb7f8c@sultans-softball-calendar",
+    "summary": "Sultans @ The Locals \u2014 Game 1"
+  },
+  {
+    "start_local": "2026-10-19T21:30:00-04:00",
+    "end_local": "2026-10-19T22:25:00-04:00",
+    "opponent": "The Locals",
+    "location": "Quincy Park \u2014 Adult Diamond #3, 1021 N Quincy St Arlington VA 22203",
+    "home_away": "Home",
+    "game_number": 2,
+    "meeting_number": 2,
+    "uid": "39ed0059fb9ced9eb1157624@sultans-softball-calendar",
+    "summary": "Sultans vs The Locals \u2014 Game 2"
+  },
+  {
+    "start_local": "2026-10-26T18:30:00-04:00",
+    "end_local": "2026-10-26T19:25:00-04:00",
+    "opponent": "Ninos",
+    "location": "Barcroft Park \u2014 Adult Diamond #4, 4200 S Four Mile Run Dr Arlington VA 22206",
+    "home_away": "Away",
+    "game_number": 1,
+    "meeting_number": 2,
+    "uid": "ff03b3da8002babbc9638148@sultans-softball-calendar",
+    "summary": "Sultans @ Ninos \u2014 Game 1"
+  },
+  {
+    "start_local": "2026-10-26T19:30:00-04:00",
+    "end_local": "2026-10-26T20:25:00-04:00",
+    "opponent": "Ninos",
+    "location": "Barcroft Park \u2014 Adult Diamond #4, 4200 S Four Mile Run Dr Arlington VA 22206",
+    "home_away": "Home",
+    "game_number": 2,
+    "meeting_number": 2,
+    "uid": "651bc155d566162edfb4f29e@sultans-softball-calendar",
+    "summary": "Sultans vs Ninos \u2014 Game 2"
+  }
+]

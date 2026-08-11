@@ -1,0 +1,316 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Sultans Softball Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Sultans Men's Softball
+X-WR-TIMEZONE:America/New_York
+X-PUBLISHED-TTL:PT12H
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+BEGIN:VEVENT
+UID:b2dd201605963b0150bf44ee@sultans-softball-calendar
+DTSTAMP:20260811T134838Z
+DTSTART:20260817T223000Z
+DTEND:20260817T232500Z
+SUMMARY:Sultans vs The Locals — Game 1
+LOCATION:Barcroft Park — Adult Diamond #4\, 4200 S Four Mile Run Dr Arlin
+ gton VA 22206
+DESCRIPTION:Sultans men's softball — Game 1 of the doubleheader. Sultans 
+ are home for this game. Game length: 55 minutes. Source: https://vaarlin
+ gtonweb.myvscloud.com/webtrac/web/schedule.html?action=leaguedetails&awa
+ yid=304539538&fmid=345063462
+URL:https://vaarlingtonweb.myvscloud.com/webtrac/web/schedule.html?action
+ =leaguedetails&awayid=304539538&fmid=345063462
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:37d0a20593858e127615cff1@sultans-softball-calendar
+DTSTAMP:20260811T134838Z
+DTSTART:20260817T233000Z
+DTEND:20260818T002500Z
+SUMMARY:Sultans @ The Locals — Game 2
+LOCATION:Barcroft Park — Adult Diamond #4\, 4200 S Four Mile Run Dr Arlin
+ gton VA 22206
+DESCRIPTION:Sultans men's softball — Game 2 of the doubleheader. Sultans 
+ are away for this game. Game length: 55 minutes. Source: https://vaarlin
+ gtonweb.myvscloud.com/webtrac/web/schedule.html?action=leaguedetails&awa
+ yid=304539538&fmid=345063462
+URL:https://vaarlingtonweb.myvscloud.com/webtrac/web/schedule.html?action
+ =leaguedetails&awayid=304539538&fmid=345063462
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:b27cbbcbb43de567c1f01e9c@sultans-softball-calendar
+DTSTAMP:20260811T134838Z
+DTSTART:20260825T003000Z
+DTEND:20260825T012500Z
+SUMMARY:Sultans vs Ninos — Game 1
+LOCATION:Quincy Park — Adult Diamond #3\, 1021 N Quincy St Arlington VA 2
+ 2203
+DESCRIPTION:Sultans men's softball — Game 1 of the doubleheader. Sultans 
+ are home for this game. Game length: 55 minutes. Source: https://vaarlin
+ gtonweb.myvscloud.com/webtrac/web/schedule.html?action=leaguedetails&awa
+ yid=304539538&fmid=345063462
+URL:https://vaarlingtonweb.myvscloud.com/webtrac/web/schedule.html?action
+ =leaguedetails&awayid=304539538&fmid=345063462
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:775149d92760e1763cff1745@sultans-softball-calendar
+DTSTAMP:20260811T134838Z
+DTSTART:20260825T013000Z
+DTEND:20260825T022500Z
+SUMMARY:Sultans @ Ninos — Game 2
+LOCATION:Quincy Park — Adult Diamond #3\, 1021 N Quincy St Arlington VA 2
+ 2203
+DESCRIPTION:Sultans men's softball — Game 2 of the doubleheader. Sultans 
+ are away for this game. Game length: 55 minutes. Source: https://vaarlin
+ gtonweb.myvscloud.com/webtrac/web/schedule.html?action=leaguedetails&awa
+ yid=304539538&fmid=345063462
+URL:https://vaarlingtonweb.myvscloud.com/webtrac/web/schedule.html?action
+ =leaguedetails&awayid=304539538&fmid=345063462
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:da1ae7f815e1e5a684359110@sultans-softball-calendar
+DTSTAMP:20260811T134838Z
+DTSTART:20260831T223000Z
+DTEND:20260831T232500Z
+SUMMARY:Sultans @ #SlingshotDC — Game 1
+LOCATION:Gunston Park — Adult Diamond #1\, 2700 S Lang St Arlington VA 22
+ 206
+DESCRIPTION:Sultans men's softball — Game 1 of the doubleheader. Sultans 
+ are away for this game. Game length: 55 minutes. Source: https://vaarlin
+ gtonweb.myvscloud.com/webtrac/web/schedule.html?action=leaguedetails&awa
+ yid=304539538&fmid=345063462
+URL:https://vaarlingtonweb.myvscloud.com/webtrac/web/schedule.html?action
+ =leaguedetails&awayid=304539538&fmid=345063462
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:19c2644e800e2054cb42886e@sultans-softball-calendar
+DTSTAMP:20260811T134838Z
+DTSTART:20260831T233000Z
+DTEND:20260901T002500Z
+SUMMARY:Sultans vs #SlingshotDC — Game 2
+LOCATION:Gunston Park — Adult Diamond #1\, 2700 S Lang St Arlington VA 22
+ 206
+DESCRIPTION:Sultans men's softball — Game 2 of the doubleheader. Sultans 
+ are home for this game. Game length: 55 minutes. Source: https://vaarlin
+ gtonweb.myvscloud.com/webtrac/web/schedule.html?action=leaguedetails&awa
+ yid=304539538&fmid=345063462
+URL:https://vaarlingtonweb.myvscloud.com/webtrac/web/schedule.html?action
+ =leaguedetails&awayid=304539538&fmid=345063462
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:8105cfb15b01b0747fdd812d@sultans-softball-calendar
+DTSTAMP:20260811T134838Z
+DTSTART:20260914T223000Z
+DTEND:20260914T232500Z
+SUMMARY:Sultans @ Narwhals — Game 1
+LOCATION:Barcroft Park — Adult Diamond #4\, 4200 S Four Mile Run Dr Arlin
+ gton VA 22206
+DESCRIPTION:Sultans men's softball — Game 1 of the doubleheader. Sultans 
+ are away for this game. Game length: 55 minutes. Source: https://vaarlin
+ gtonweb.myvscloud.com/webtrac/web/schedule.html?action=leaguedetails&awa
+ yid=304539538&fmid=345063462
+URL:https://vaarlingtonweb.myvscloud.com/webtrac/web/schedule.html?action
+ =leaguedetails&awayid=304539538&fmid=345063462
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:b2e2e8799b93225efc628a84@sultans-softball-calendar
+DTSTAMP:20260811T134838Z
+DTSTART:20260914T233000Z
+DTEND:20260915T002500Z
+SUMMARY:Sultans vs Narwhals — Game 2
+LOCATION:Barcroft Park — Adult Diamond #4\, 4200 S Four Mile Run Dr Arlin
+ gton VA 22206
+DESCRIPTION:Sultans men's softball — Game 2 of the doubleheader. Sultans 
+ are home for this game. Game length: 55 minutes. Source: https://vaarlin
+ gtonweb.myvscloud.com/webtrac/web/schedule.html?action=leaguedetails&awa
+ yid=304539538&fmid=345063462
+URL:https://vaarlingtonweb.myvscloud.com/webtrac/web/schedule.html?action
+ =leaguedetails&awayid=304539538&fmid=345063462
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:125f3c735bf7e989334c512a@sultans-softball-calendar
+DTSTAMP:20260811T134838Z
+DTSTART:20260921T223000Z
+DTEND:20260921T232500Z
+SUMMARY:Sultans @ Rocklands — Game 1
+LOCATION:Gunston Park — Adult Diamond #1\, 2700 S Lang St Arlington VA 22
+ 206
+DESCRIPTION:Sultans men's softball — Game 1 of the doubleheader. Sultans 
+ are away for this game. Game length: 55 minutes. Source: https://vaarlin
+ gtonweb.myvscloud.com/webtrac/web/schedule.html?action=leaguedetails&awa
+ yid=304539538&fmid=345063462
+URL:https://vaarlingtonweb.myvscloud.com/webtrac/web/schedule.html?action
+ =leaguedetails&awayid=304539538&fmid=345063462
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:247d086c9b49eca5d7512a8a@sultans-softball-calendar
+DTSTAMP:20260811T134838Z
+DTSTART:20260921T233000Z
+DTEND:20260922T002500Z
+SUMMARY:Sultans vs Rocklands — Game 2
+LOCATION:Gunston Park — Adult Diamond #1\, 2700 S Lang St Arlington VA 22
+ 206
+DESCRIPTION:Sultans men's softball — Game 2 of the doubleheader. Sultans 
+ are home for this game. Game length: 55 minutes. Source: https://vaarlin
+ gtonweb.myvscloud.com/webtrac/web/schedule.html?action=leaguedetails&awa
+ yid=304539538&fmid=345063462
+URL:https://vaarlingtonweb.myvscloud.com/webtrac/web/schedule.html?action
+ =leaguedetails&awayid=304539538&fmid=345063462
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:5334d2b19918cd4ba6f7b4a3@sultans-softball-calendar
+DTSTAMP:20260811T134838Z
+DTSTART:20260928T223000Z
+DTEND:20260928T232500Z
+SUMMARY:Sultans vs Brawl Stars — Game 1
+LOCATION:Jennie Dean Park — Adult Diamond #1 (Ernest E. Johnson Field)\, 
+ 3630 27th St S Arlington VA 22206
+DESCRIPTION:Sultans men's softball — Game 1 of the doubleheader. Sultans 
+ are home for this game. Game length: 55 minutes. Source: https://vaarlin
+ gtonweb.myvscloud.com/webtrac/web/schedule.html?action=leaguedetails&awa
+ yid=304539538&fmid=345063462
+URL:https://vaarlingtonweb.myvscloud.com/webtrac/web/schedule.html?action
+ =leaguedetails&awayid=304539538&fmid=345063462
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:86d181710e1cd27096546ee4@sultans-softball-calendar
+DTSTAMP:20260811T134838Z
+DTSTART:20260928T233000Z
+DTEND:20260929T002500Z
+SUMMARY:Sultans @ Brawl Stars — Game 2
+LOCATION:Jennie Dean Park — Adult Diamond #1 (Ernest E. Johnson Field)\, 
+ 3630 27th St S Arlington VA 22206
+DESCRIPTION:Sultans men's softball — Game 2 of the doubleheader. Sultans 
+ are away for this game. Game length: 55 minutes. Source: https://vaarlin
+ gtonweb.myvscloud.com/webtrac/web/schedule.html?action=leaguedetails&awa
+ yid=304539538&fmid=345063462
+URL:https://vaarlingtonweb.myvscloud.com/webtrac/web/schedule.html?action
+ =leaguedetails&awayid=304539538&fmid=345063462
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:7255aebbe0cabac931a1d72a@sultans-softball-calendar
+DTSTAMP:20260811T134838Z
+DTSTART:20261005T223000Z
+DTEND:20261005T232500Z
+SUMMARY:Sultans vs Brew Crew — Game 1
+LOCATION:Barcroft Park — Adult Diamond #4\, 4200 S Four Mile Run Dr Arlin
+ gton VA 22206
+DESCRIPTION:Sultans men's softball — Game 1 of the doubleheader. Sultans 
+ are home for this game. Game length: 55 minutes. Source: https://vaarlin
+ gtonweb.myvscloud.com/webtrac/web/schedule.html?action=leaguedetails&awa
+ yid=304539538&fmid=345063462
+URL:https://vaarlingtonweb.myvscloud.com/webtrac/web/schedule.html?action
+ =leaguedetails&awayid=304539538&fmid=345063462
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:a2abef5c63c15fb798e0c228@sultans-softball-calendar
+DTSTAMP:20260811T134838Z
+DTSTART:20261005T233000Z
+DTEND:20261006T002500Z
+SUMMARY:Sultans @ Brew Crew — Game 2
+LOCATION:Barcroft Park — Adult Diamond #4\, 4200 S Four Mile Run Dr Arlin
+ gton VA 22206
+DESCRIPTION:Sultans men's softball — Game 2 of the doubleheader. Sultans 
+ are away for this game. Game length: 55 minutes. Source: https://vaarlin
+ gtonweb.myvscloud.com/webtrac/web/schedule.html?action=leaguedetails&awa
+ yid=304539538&fmid=345063462
+URL:https://vaarlingtonweb.myvscloud.com/webtrac/web/schedule.html?action
+ =leaguedetails&awayid=304539538&fmid=345063462
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:f735e3ed42630886cacb7f8c@sultans-softball-calendar
+DTSTAMP:20260811T134838Z
+DTSTART:20261020T003000Z
+DTEND:20261020T012500Z
+SUMMARY:Sultans @ The Locals — Game 1
+LOCATION:Quincy Park — Adult Diamond #3\, 1021 N Quincy St Arlington VA 2
+ 2203
+DESCRIPTION:Sultans men's softball — Game 1 of the doubleheader. Sultans 
+ are away for this game. Game length: 55 minutes. Source: https://vaarlin
+ gtonweb.myvscloud.com/webtrac/web/schedule.html?action=leaguedetails&awa
+ yid=304539538&fmid=345063462
+URL:https://vaarlingtonweb.myvscloud.com/webtrac/web/schedule.html?action
+ =leaguedetails&awayid=304539538&fmid=345063462
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:39ed0059fb9ced9eb1157624@sultans-softball-calendar
+DTSTAMP:20260811T134838Z
+DTSTART:20261020T013000Z
+DTEND:20261020T022500Z
+SUMMARY:Sultans vs The Locals — Game 2
+LOCATION:Quincy Park — Adult Diamond #3\, 1021 N Quincy St Arlington VA 2
+ 2203
+DESCRIPTION:Sultans men's softball — Game 2 of the doubleheader. Sultans 
+ are home for this game. Game length: 55 minutes. Source: https://vaarlin
+ gtonweb.myvscloud.com/webtrac/web/schedule.html?action=leaguedetails&awa
+ yid=304539538&fmid=345063462
+URL:https://vaarlingtonweb.myvscloud.com/webtrac/web/schedule.html?action
+ =leaguedetails&awayid=304539538&fmid=345063462
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:ff03b3da8002babbc9638148@sultans-softball-calendar
+DTSTAMP:20260811T134838Z
+DTSTART:20261026T223000Z
+DTEND:20261026T232500Z
+SUMMARY:Sultans @ Ninos — Game 1
+LOCATION:Barcroft Park — Adult Diamond #4\, 4200 S Four Mile Run Dr Arlin
+ gton VA 22206
+DESCRIPTION:Sultans men's softball — Game 1 of the doubleheader. Sultans 
+ are away for this game. Game length: 55 minutes. Source: https://vaarlin
+ gtonweb.myvscloud.com/webtrac/web/schedule.html?action=leaguedetails&awa
+ yid=304539538&fmid=345063462
+URL:https://vaarlingtonweb.myvscloud.com/webtrac/web/schedule.html?action
+ =leaguedetails&awayid=304539538&fmid=345063462
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:651bc155d566162edfb4f29e@sultans-softball-calendar
+DTSTAMP:20260811T134838Z
+DTSTART:20261026T233000Z
+DTEND:20261027T002500Z
+SUMMARY:Sultans vs Ninos — Game 2
+LOCATION:Barcroft Park — Adult Diamond #4\, 4200 S Four Mile Run Dr Arlin
+ gton VA 22206
+DESCRIPTION:Sultans men's softball — Game 2 of the doubleheader. Sultans 
+ are home for this game. Game length: 55 minutes. Source: https://vaarlin
+ gtonweb.myvscloud.com/webtrac/web/schedule.html?action=leaguedetails&awa
+ yid=304539538&fmid=345063462
+URL:https://vaarlingtonweb.myvscloud.com/webtrac/web/schedule.html?action
+ =leaguedetails&awayid=304539538&fmid=345063462
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR
