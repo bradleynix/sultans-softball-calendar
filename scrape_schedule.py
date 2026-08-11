@@ -20,7 +20,7 @@ from dataclasses import asdict, dataclass
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from urllib.parse import parse_qs, unquote_plus, urlparse
-from zoneinfo import ZoneInfo
+from dateutil.tz import gettz
 
 import requests
 from bs4 import BeautifulSoup
@@ -32,7 +32,9 @@ SOURCE_URL = os.getenv(
 TEAM_NAME = os.getenv("TEAM_NAME", "Sultans")
 LEAGUE_ID = os.getenv("LEAGUE_ID", "345063462")
 LOCAL_TZ_NAME = os.getenv("TIMEZONE", "America/New_York")
-LOCAL_TZ = ZoneInfo(LOCAL_TZ_NAME)
+LOCAL_TZ = gettz(LOCAL_TZ_NAME)
+if LOCAL_TZ is None:
+    raise RuntimeError(f"Unknown timezone: {LOCAL_TZ_NAME}")
 MIN_NIGHTS = int(os.getenv("MIN_NIGHTS", "3"))
 GAME_DURATION_MINUTES = int(os.getenv("GAME_DURATION_MINUTES", "55"))
 DOUBLEHEADER_GAP_MINUTES = int(os.getenv("DOUBLEHEADER_GAP_MINUTES", "60"))
@@ -443,7 +445,7 @@ def main() -> None:
         )
 
         refreshed = datetime.now(timezone.utc)
-        (OUTPUT_DIR / CALENDAR_FILENAME).write_text(build_ics(games), encoding="utf-8", newline="")
+        (OUTPUT_DIR / CALENDAR_FILENAME).write_text(build_ics(games), encoding="utf-8")
         (OUTPUT_DIR / "index.html").write_text(build_index(games, refreshed), encoding="utf-8")
         (OUTPUT_DIR / ".nojekyll").write_text("", encoding="utf-8")
 
