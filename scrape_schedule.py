@@ -41,6 +41,7 @@ DOUBLEHEADER_GAP_MINUTES = int(os.getenv("DOUBLEHEADER_GAP_MINUTES", "60"))
 OUTPUT_DIR = Path(os.getenv("OUTPUT_DIR", "site"))
 DEBUG_DIR = Path(os.getenv("DEBUG_DIR", "debug"))
 CALENDAR_FILENAME = os.getenv("CALENDAR_FILENAME", "sultans-softball.ics")
+PUBLIC_BASE_URL = os.getenv("PUBLIC_BASE_URL", "https://bradleynix.github.io/sultans-softball-calendar/")
 SOURCE_HTML_FILE = os.getenv("SOURCE_HTML_FILE", "").strip()
 
 DATE_RE = re.compile(r"^\d{1,2}/\d{1,2}/\d{4}$")
@@ -301,6 +302,9 @@ def build_ics(games: list[Game]) -> str:
 
 
 def build_index(games: list[Game], refreshed_at: datetime) -> str:
+    calendar_url = "{}/{}".format(PUBLIC_BASE_URL.rstrip("/"), CALENDAR_FILENAME)
+    webcal_url = re.sub(r"^https://", "webcal://", calendar_url, flags=re.I)
+
     rows = []
     for g in games:
         relation = "vs" if g.home_away == "Home" else "@"
@@ -323,23 +327,45 @@ def build_index(games: list[Game], refreshed_at: datetime) -> str:
 <title>Sultans Men's Softball Calendar</title>
 <style>
 body{{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;max-width:1100px;margin:2rem auto;padding:0 1rem;color:#1f2937}}
-h1{{margin-bottom:.35rem}} .muted{{color:#6b7280}} .button{{display:inline-block;padding:.75rem 1rem;background:#111827;color:white;text-decoration:none;border-radius:.5rem;font-weight:600;margin:.5rem 0 1.5rem}}
-table{{border-collapse:collapse;width:100%;font-size:.95rem}} th,td{{text-align:left;padding:.7rem;border-bottom:1px solid #e5e7eb;vertical-align:top}} th{{background:#f9fafb}}
-.notice{{background:#f3f4f6;padding:1rem;border-radius:.5rem;margin:1rem 0 1.5rem}} code{{word-break:break-all}} @media(max-width:700px){{table{{font-size:.82rem}} th,td{{padding:.45rem}}}}
+h1{{margin-bottom:.35rem}}
+.muted{{color:#6b7280}}
+.button{{display:inline-block;padding:.75rem 1rem;background:#111827;color:white;text-decoration:none;border:1px solid #111827;border-radius:.5rem;font-weight:600;margin:.5rem .4rem .5rem 0}}
+.button.secondary{{background:white;color:#111827;border-color:#9ca3af}}
+table{{border-collapse:collapse;width:100%;font-size:.95rem}}
+th,td{{text-align:left;padding:.7rem;border-bottom:1px solid #e5e7eb;vertical-align:top}}
+th{{background:#f9fafb}}
+.notice{{background:#f3f4f6;padding:1rem;border-radius:.5rem;margin:1rem 0 1.5rem}}
+code{{word-break:break-all}}
+@media(max-width:700px){{table{{font-size:.82rem}}th,td{{padding:.45rem}}}}
 </style>
 </head>
 <body>
 <h1>Sultans Men's Softball</h1>
 <p class="muted">Arlington, Virginia · Automatically refreshed from Arlington WebTrac</p>
-<a class="button" href="{html.escape(CALENDAR_FILENAME)}">Subscribe / download calendar</a>
+
+<p>
+<a class="button" href="{html.escape(webcal_url)}">Subscribe to Apple Calendar</a>
+<a class="button secondary" href="{html.escape(calendar_url)}">Open ICS feed</a>
+</p>
+
+<p><strong>Calendar URL:</strong><br><code>{html.escape(calendar_url)}</code></p>
+<p class="muted">
+Google Calendar: Other calendars → + → From URL, then paste the Calendar URL above.<br>
+Apple Calendar: use the Subscribe to Apple Calendar button above, or add a subscription calendar and paste the same URL.
+</p>
+
 <div class="notice"><strong>Doubleheaders:</strong> Arlington lists only the first game time for each night. This feed creates Game 1 at the listed time and Game 2 one hour later. Each game is scheduled for 55 minutes, and home/away reverses for Game 2.</div>
+
+<h2>Current schedule</h2>
 <table>
 <thead><tr><th>Date</th><th>Time</th><th>Game</th><th>Matchup</th><th>H/A</th><th>Location</th></tr></thead>
 <tbody>{''.join(rows)}</tbody>
 </table>
+
 <p class="muted">Last successful refresh: {html.escape(refreshed_at.astimezone(LOCAL_TZ).strftime('%B %-d, %Y at %-I:%M %p %Z'))}</p>
 <p class="muted">Source: <a href="{html.escape(SOURCE_URL)}">Arlington WebTrac schedule</a></p>
 </body></html>"""
+
 
 
 def save_debug(name: str, content: str) -> None:
