@@ -110,28 +110,6 @@
     "summary": "Sultans vs Rocklands \u2014 Game 2"
   },
   {
-    "start_local": "2026-09-28T18:30:00-04:00",
-    "end_local": "2026-09-28T19:25:00-04:00",
-    "opponent": "Brawl Stars",
-    "location": "Jennie Dean Park \u2014 Adult Diamond #1 (Ernest E. Johnson Field), 3630 27th St S Arlington VA 22206",
-    "home_away": "Home",
-    "game_number": 1,
-    "meeting_number": 1,
-    "uid": "5334d2b19918cd4ba6f7b4a3@sultans-softball-calendar",
-    "summary": "Sultans vs Brawl Stars \u2014 Game 1"
-  },
-  {
-    "start_local": "2026-09-28T19:30:00-04:00",
-    "end_local": "2026-09-28T20:25:00-04:00",
-    "opponent": "Brawl Stars",
-    "location": "Jennie Dean Park \u2014 Adult Diamond #1 (Ernest E. Johnson Field), 3630 27th St S Arlington VA 22206",
-    "home_away": "Away",
-    "game_number": 2,
-    "meeting_number": 1,
-    "uid": "86d181710e1cd27096546ee4@sultans-softball-calendar",
-    "summary": "Sultans @ Brawl Stars \u2014 Game 2"
-  },
-  {
     "start_local": "2026-10-05T18:30:00-04:00",
     "end_local": "2026-10-05T19:25:00-04:00",
     "opponent": "Brew Crew",
@@ -152,6 +130,28 @@
     "meeting_number": 1,
     "uid": "a2abef5c63c15fb798e0c228@sultans-softball-calendar",
     "summary": "Sultans @ Brew Crew \u2014 Game 2"
+  },
+  {
+    "start_local": "2026-10-12T18:30:00-04:00",
+    "end_local": "2026-10-12T19:25:00-04:00",
+    "opponent": "Brawl Stars",
+    "location": "Gunston Park \u2014 Adult Diamond #1, 2700 S Lang St Arlington VA 22206",
+    "home_away": "Home",
+    "game_number": 1,
+    "meeting_number": 1,
+    "uid": "5334d2b19918cd4ba6f7b4a3@sultans-softball-calendar",
+    "summary": "Sultans vs Brawl Stars \u2014 Game 1"
+  },
+  {
+    "start_local": "2026-10-12T19:30:00-04:00",
+    "end_local": "2026-10-12T20:25:00-04:00",
+    "opponent": "Brawl Stars",
+    "location": "Gunston Park \u2014 Adult Diamond #1, 2700 S Lang St Arlington VA 22206",
+    "home_away": "Away",
+    "game_number": 2,
+    "meeting_number": 1,
+    "uid": "86d181710e1cd27096546ee4@sultans-softball-calendar",
+    "summary": "Sultans @ Brawl Stars \u2014 Game 2"
   },
   {
     "start_local": "2026-10-19T20:30:00-04:00",
