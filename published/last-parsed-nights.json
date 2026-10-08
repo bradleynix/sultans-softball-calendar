@@ -40,14 +40,6 @@
     "home_team": "Rocklands"
   },
   {
-    "date": "10/05/2026",
-    "time": "6:30 pm",
-    "location_label": "Barcroft Park \u2014 Adult Diamond #4",
-    "location_address": "4200 S Four Mile Run Dr Arlington VA 22206",
-    "away_team": "Brew Crew",
-    "home_team": "Sultans"
-  },
-  {
     "date": "10/12/2026",
     "time": "6:30 pm",
     "location_label": "Gunston Park \u2014 Adult Diamond #1",
@@ -70,5 +62,13 @@
     "location_address": "4200 S Four Mile Run Dr Arlington VA 22206",
     "away_team": "Sultans",
     "home_team": "Ninos"
+  },
+  {
+    "date": "11/09/2026",
+    "time": "6:30 pm",
+    "location_label": "Gunston Park \u2014 Adult Diamond #1",
+    "location_address": "2700 S Lang St Arlington VA 22206",
+    "away_team": "Brew Crew",
+    "home_team": "Sultans"
   }
 ]
